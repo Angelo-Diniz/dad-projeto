@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="pt-br">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon" />
+    <meta name="author" content="www.clicksolucoesweb.com.br" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="/content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/app/bundle/site.min.css" />
+    <title>Conhe&#231;a a ASPEC</title>
+    <meta name="description" content="Conhe&#231;a a ASPEC" />
+    <meta name="keywords" content="Conhe&#231;a a ASPEC" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">
+                    <img src="/imagens/aspec.png" alt="Conhe&#231;a a ASPEC" title="Conhe&#231;a a ASPEC" />
+                </a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down table-of-contents">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a class="waves-effect waves-light btn-large" href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+                <ul class="side-nav table-of-contents" id="mobile">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<div ng-app="App" ng-controller="ConhecaAAspecCtrl" ng-init="getPagina()">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1>Conhe&#231;a a ASPEC</h1>
+                <h3>Quem Somos</h3>
+<p>A A&ccedil;&atilde;o Solid&aacute;ria &agrave;s Pessoas com C&acirc;ncer - ASPEC &eacute; uma organiza&ccedil;&atilde;o da sociedade civil, fundada em 04 de janeiro de 2012, que atende pessoas portadoras de c&acirc;ncer, que encontram em situa&ccedil;&atilde;o de vulnerabilidade social. Tal entidade foi fundada ap&oacute;s o falecimento de um familiar da sua fundadora, que veio do interior de Minas Gerais juntamente com seu irm&atilde;o para tratamento do c&acirc;ncer em Belo Horizonte, esbarrando em muitas dificuldades, dentre elas o provimento da sua alimenta&ccedil;&atilde;o b&aacute;sica e o acesso a orienta&ccedil;&otilde;es quanto aos seus direitos sociais. A entidade al&eacute;m de prestar assist&ecirc;ncia social e psicol&oacute;gica &agrave;s pessoas portadoras de c&acirc;ncer e seus familiares, busca a difus&atilde;o da informa&ccedil;&atilde;o, sensibiliza&ccedil;&atilde;o e engajamento de atores na luta contra o c&acirc;ncer e/ou diagn&oacute;stico precoce. Para tanto, oferta atendimentos, concess&atilde;o de benef&iacute;cios eventuais, suplementos alimentares, roupas, oficinas de gera&ccedil;&atilde;o de trabalho e renda e fortalecimento de v&iacute;nculos familiar e comunit&aacute;rio, palestras e caminhadas educativas para dissemina&ccedil;&atilde;o da informa&ccedil;&atilde;o referente ao c&acirc;ncer, direitos sociais e dentre outros. A ASPEC n&atilde;o &eacute; conveniada com o poder p&uacute;blico e conta com doa&ccedil;&otilde;es de pessoas f&iacute;sicas e jur&iacute;dicas que sensibilizam com a causa apresentada,<br />para sua manuten&ccedil;&atilde;o.&nbsp;</p>
+<h3>Miss&atilde;o</h3>
+<p>Prestar assist&ecirc;ncia social e psicol&oacute;gica &agrave;s pessoas portadoras de c&acirc;ncer independente do g&ecirc;nero, ra&ccedil;a e idade contribuindo com a qualidade do tratamento oncol&oacute;gico. Al&eacute;m de atuar como agente de promo&ccedil;&atilde;o de conhecimentos referente ao diagn&oacute;stico precoce do c&acirc;ncer e/ou tratamento, bem como influenciar a formula&ccedil;&atilde;o da pol&iacute;tica p&uacute;blica de sa&uacute;de e campos afins para gerar a garantia da universalidade, integralidade e equidade na aten&ccedil;&atilde;o &agrave; sa&uacute;de do indiv&iacute;duo.</p>
+<h3>Vis&atilde;o</h3>
+<p>Ser refer&ecirc;ncia no apoio &agrave;s pessoas portadoras de c&acirc;ncer, no que diz respeito &agrave; qualidade da assist&ecirc;ncia social, psicol&oacute;gica e a promo&ccedil;&atilde;o de melhorias do tratamento oncol&oacute;gico em Minas Gerais.</p>
+<h2>Valores</h2>
+<h3>Amor</h3>
+<p>Refor&ccedil;amos constantemente a pr&aacute;tica do amor, do zelo, do cuidado, compaix&atilde;o, paci&ecirc;ncia e bondade com o outro. Acreditamos que o amor deve ser visto como a base de sustenta&ccedil;&atilde;o de todos os demais princ&iacute;pios e valores da Institui&ccedil;&atilde;o. INTEGRIDADE: Primamos pela honestidade, lisura, justi&ccedil;a, retid&atilde;o e idoneidade, podendo esses serem traduzidos em forma de transpar&ecirc;ncia e verdade. EXCEL&Ecirc;NCIA: Temos o compromisso e o dever com a qualidade dos servi&ccedil;os prestados, buscando sempre fornecer o melhor, independente do que se trata.</p>
+<h3>Atitude</h3>
+<p>Sabemos agir e reagir frente aos acontecimentos e entraves. Valorizamos a persist&ecirc;ncia, a disposi&ccedil;&atilde;o e a iniciativa na busca pela supera&ccedil;&atilde;o das nossas dificuldades. OTIMISMO: Encaramos as coisas pelo seu lado bom e esperamos sempre uma solu&ccedil;&atilde;o favor&aacute;vel para as situa&ccedil;&otilde;es dif&iacute;ceis.</p>
+<h3>Nova&ccedil;&atilde;o ou Inova&ccedil;&atilde;o</h3>
+<p>Valorizamos e estimulamos a pr&aacute;tica da criatividade como instrumento para criar e recriar alternativas de supera&ccedil;&atilde;o de obst&aacute;culos, a fim de alcan&ccedil;armos os nossos objetivos.</p>
+<h3>Respeito</h3>
+<p>Acreditamos que esse deve ser um exerc&iacute;cio di&aacute;rio e que somente com sua pr&aacute;tica poderemos compreender e aceitar as limita&ccedil;&otilde;es, a individualidade e o direito do outro, valorizando as diferen&ccedil;as como fator de desenvolvimento e crescimento.</p>
+<h3>Redes Sociais</h3>
+<p>Site: <a href="http:www.aspecsolidaria.org.br">www.aspecsolidaria.org.br</a><br />Facebook:&nbsp;<a href="https://www.facebook.com/ong.aspec">https://www.facebook.com/ong.aspec</a></p>
+<h3>Colabore Doa&ccedil;&otilde;es</h3>
+<p>Dep&oacute;sito banc&aacute;rio informar conta e outros meios de doa&ccedil;&atilde;o<br />Caixa Econ&ocirc;mica Federal<br />Ag&ecirc;ncia: 2426<br />Opera&ccedil;&atilde;o: 003<br />Conta: 1146-7<br />CNPJ: 15.251.909/0001-90&nbsp;</p>
+<h3>Programas &ndash; servi&ccedil;os oferecidos</h3>
+<p>Programa de Alimenta&ccedil;&atilde;o B&aacute;sica - PROAB</p>
+<ul>
+<li>Cesta B&aacute;sica;</li>
+<li>Vale G&aacute;s;</li>
+<li>Vale Sacol&atilde;o;</li>
+<li>Suplementos Alimentares.</li>
+</ul>
+<p>Programa de Higiene Total - PROHT</p>
+<ul>
+<li>Produtos de Higiene Pessoal e Limpeza;</li>
+<li>Fralda Descart&aacute;vel.</li>
+</ul>
+<h3>Localiza&ccedil;&atilde;o e contato</h3>
+<p>Rua: Padre Paulo Reg&oacute;lio, n&ordm;27 &ndash; C&eacute;u Azul A CEP: 31.585-150 Telefone: (31) 3567-0229 / 3582-7145 <a href="mailto:social@aspecsolidaria.org.br">social@aspecsolidaria.org.br</a><br /><a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/Scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/Scripts/materialize/materialize.min.js"></script><script src="/Scripts/angular.min.js"></script>
+<script src="/Scripts/angular-sanitize.min.js"></script>
+<script src="/Scripts/angular-cookies.min.js"></script>
+<script src="/Scripts/dirPagination.js"></script>
+
+<script type="text/javascript" src="/app/site/bundle/app.min.js"></script>
+<script type="text/javascript" src="/app/site/index.js"></script>
+
+ <footer class="page-footer">
+    <div class="container">
+        <div class="row" style="margin-top:30px; margin-bottom:30px">
+            <div class="col l6 s12">
+                <p class="text-lighten-4">
+                    <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a><br />
+                    <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                </p>
+                <p class="text-lighten-4">
+                    <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia" rel="follow">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                    
+                    
+                    <li><a href="/contato" rel="nofollow">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+            <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+        </div>
+    </div>
+</footer>
+<script src="/app/bundle/site.min.js"></script>
+<script type="text/javascript" src="/js/vegas.min.js"></script>
+<script>
+    $(".banner").vegas({
+        slides: [
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg" }
+        ],
+        animation: ['kenburnsUp']
+    });
+    function GetHeight() {
+        var h = window.innerHeight;
+        $(".banner").css({ "height": h });
+    };
+</script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+            $('.slider').slider({ full_width: true });
+            $('.scrollspy').scrollSpy();
+            $('select').material_select();
+            $('#preloader-form').hide();
+            $('.carousel').carousel();
+            $('.materialboxed').materialbox();
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>

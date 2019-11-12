@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="pt-br">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon" />
+    <meta name="author" content="www.clicksolucoesweb.com.br" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="/content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/app/bundle/site.min.css" />
+    <title>Fa&#231;a sua doa&#231;&#227;o</title>
+    <meta name="description" content="Fa&#231;a sua doa&#231;&#227;o" />
+    <meta name="keywords" content="Fa&#231;a sua doa&#231;&#227;o" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">
+                    <img src="/imagens/aspec.png" alt="Fa&#231;a sua doa&#231;&#227;o" title="Fa&#231;a sua doa&#231;&#227;o" />
+                </a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down table-of-contents">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a class="waves-effect waves-light btn-large" href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+                <ul class="side-nav table-of-contents" id="mobile">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<div ng-app="App" ng-controller="OQueFazemosCtrl" ng-init="getPagina()">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1>Fa&#231;a sua doa&#231;&#227;o</h1>
+                <p>Dep&oacute;sito banc&aacute;rio informar conta e outros meios de doa&ccedil;&atilde;o<br />Caixa Econ&ocirc;mica Federal<br />Ag&ecirc;ncia: 2426<br />Opera&ccedil;&atilde;o: 003<br />Conta: 1146-7<br />CNPJ: 15.251.909/0001-90&nbsp;</p>
+<h3>Doa&ccedil;&atilde;o de alimentos</h3>
+<p>Ajude tamb&eacute;m doando alimentos n&atilde;o perec&iacute;veis, como cestas-b&aacute;sicas, leite longa vida ou em p&oacute;, suplemento alimentar(Sustagen, Sustain, Nutrein Active, etc), fraldas descart&aacute;veis e vale-transporte.</p>
+<h3>Contribui&ccedil;&atilde;o mensal</h3>
+<p>Qualquer valor em dinheiro pode ser doado mensalmente. Uma vez por m&ecirc;s entraremos em contato por telefone para retirar em sua resid&ecirc;ncia, para moradores da Grande BH. Para mais informa&ccedil;&otilde;es, entre em contato conosco.</p>
+<div class="grande">
+<table class="highlight responsive-table">
+<thead>
+<tr>
+<th>Itens</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 fraldas geri&aacute;tricas</td>
+<td>R$ 25,00</td>
+</tr>
+<tr>
+<td>08 passagens de &ocirc;nibus para Quimio e Radioterapia</td>
+<td>R$ 30,00</td>
+</tr>
+<tr>
+<td>02 latas de suplemento alimentar</td>
+<td>R$ 50,00</td>
+</tr>
+<tr>
+<td>01 cesta b&aacute;sica de 30kg</td>
+<td>R$ 100,00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+
+<div class="pequeno">
+<div class="row">
+
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p>20 fraldas geriátricas</p>
+            </div>
+            <div class="card-action">
+              R$ 25,00
+            </div>
+          </div>
+        </div>
+
+<div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p>08 passagens de ônibus para Quimio e Radioterapia</p>
+            </div>
+            <div class="card-action">
+              R$ 30,00
+            </div>
+          </div>
+        </div>
+
+<div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p>02 latas de suplemento alimentar</p>
+            </div>
+            <div class="card-action">
+              R$ 50,00
+            </div>
+          </div>
+        </div>
+
+<div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p>01 cesta básica de 30kg</p>
+            </div>
+            <div class="card-action">
+              R$ 100,00
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+</div>
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="currency" value="BRL" />
+                    <input type="hidden" name="receiverEmail" value="financeiro@aspecsolidaria.org.br" />
+                    <input type="hidden" name="iot" value="button" />
+                    <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                </form>
+                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/Scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/Scripts/materialize/materialize.min.js"></script><script src="/Scripts/angular.min.js"></script>
+<script src="/Scripts/angular-sanitize.min.js"></script>
+<script src="/Scripts/angular-cookies.min.js"></script>
+<script src="/Scripts/dirPagination.js"></script>
+
+<script type="text/javascript" src="/app/site/bundle/app.min.js"></script>
+<script type="text/javascript" src="/app/site/index.js"></script>
+
+ <footer class="page-footer">
+    <div class="container">
+        <div class="row" style="margin-top:30px; margin-bottom:30px">
+            <div class="col l6 s12">
+                <p class="text-lighten-4">
+                    <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a><br />
+                    <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                </p>
+                <p class="text-lighten-4">
+                    <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/transparencia" rel="follow">Transparência</a></li>
+                    <li><a href="/conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="/oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                    
+                    
+                    <li><a href="/contato" rel="nofollow">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+            <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+        </div>
+    </div>
+</footer>
+<script src="/app/bundle/site.min.js"></script>
+<script type="text/javascript" src="/js/vegas.min.js"></script>
+<script>
+    $(".banner").vegas({
+        slides: [
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg" }
+        ],
+        animation: ['kenburnsUp']
+    });
+    function GetHeight() {
+        var h = window.innerHeight;
+        $(".banner").css({ "height": h });
+    };
+</script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+            $('.slider').slider({ full_width: true });
+            $('.scrollspy').scrollSpy();
+            $('select').material_select();
+            $('#preloader-form').hide();
+            $('.carousel').carousel();
+            $('.materialboxed').materialbox();
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>

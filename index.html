@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="pt-br">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!--bibliotecas bootstrap-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--bibliotecas bootstrap-->
+    <!--bibliotecas bootstrap-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="author" content="www.clicksolucoesweb.com.br" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/vegas.min.css" /> media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="app/bundle/site.min.css" />
+    <title>ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG</title>
+    <meta name="description" content="ONG de apoio ao tratamento de c&#226;ncer - Fa&#231;a sua doa&#231;&#227;o para institui&#231;&#227;o de tratamento de c&#226;ncer - Ajude os portadores de c&#226;ncer a melhorar a sua qualidade de vi" />
+    <meta name="keywords" content="aspec, ong, tratamento de c&#226;ncer, doa&#231;&#227;o para tratamento de c&#226;ncer, ajuda ao portador de c&#226;ncer, bh, mg" />
+    <meta name="robots" content="index, follow" />
+</head>
+
+<body onload="GetHeight()">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">
+                    <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
+                </a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down table-of-contents">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#transparencia">Transparência</a></li>
+                    <li><a href="#conheca-a-aspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="#o-que-fazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a class="waves-effect waves-light btn-large" href="#faca-sua-doacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+                <ul class="side-nav table-of-contents" id="mobile">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#transparencia">Transparência</a></li>
+                    <li><a href="#conheca-a-aspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href="#o-que-fazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#faca-sua-doacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div ng-app="App" ng-controller="IndexCtrl" ng-init="getPagina()">
+        <div id="progress" class="container">
+            <div class="indeterminate"></div>
+        </div>
+        <div id="container">
+            <div id="home" class="scrollspy">
+
+                <div class="banner">
+
+                </div>
+
+                <div class="container">
+
+                    <div class="row">
+                        <h2>Receba dicas e novidades</h2>
+                        <div class="input-field col s11 m5">
+                            <input id="nome" ng-model="nome" type="text" class="validate">
+                            <label for="nome">Nome</label>
+                        </div>
+                        <div class="input-field col s11 m5">
+                            <input id="email" ng-model="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s12 m2">
+                            <a id="enviar-news" class="btn waves-effect waves-light" name="action" ng-click="enviarNewsLetter()">
+                            Enviar
+                            <i class="material-icons right">send</i>
+                        </a>
+                            <div hidden id="preloader-news" class="row preloader-wrapper small active">
+                                <div class="spinner-layer spinner-green-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="transparencia" class="slider scrollspy" style="display:table">
+                <div class="container">
+                    <div class="col s12">
+                        <h2>Transpar&#234;ncia</h2>
+                        <h3>Inscri&ccedil;&otilde;es</h3>
+                        <ul>
+                            <li>Conselho Municipal de Assist&ecirc;ncia Social de Belo Horizonte&ndash; CMAS/BH: N&ordm; 330</li>
+                            <li>Utilidade P&uacute;blica Estadual: 1.553/2015</li>
+                            <li>Utilidades P&uacute;blica: Municipal: 15.598/2014</li>
+                            <li>Cadastro de Entidades e Organiza&ccedil;&otilde;es de Assist&ecirc;ncia Social da SEDESE;</li>
+                            <li>Cadastro Geral de Convenentes do Estado de Minas Gerais &ndash; CAGEC-MG: 19064</li>
+                            <li>Federa&ccedil;&atilde;o Brasileira de Institui&ccedil;&otilde;es Filantr&oacute;picas de Apoio &agrave; Sa&uacute;de da Mama &ndash; FEMAMA</li>
+                        </ul>
+                        <h3>Diretoria</h3>
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>Presidente</td>
+                                    <td>Jefferson Barbosa Moreira</td>
+                                </tr>
+                                <tr>
+                                    <td>Vice Presidente</td>
+                                    <td>Carmina K&aacute;tia Moreira Pedroso</td>
+                                </tr>
+                                <tr>
+                                    <td>Secretaria</td>
+                                    <td>Claudia Aparecida Silva</td>
+                                </tr>
+                                <tr>
+                                    <td>Tesoureiro</td>
+                                    <td>Marcelo Luiz Pedroso</td>
+                                </tr>
+                                <tr>
+                                    <td>Conselho Fiscal</td>
+                                    <td>Jose Marcus Luiz Pedroso</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Vivian Guimar&atilde;es</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Maria da Piedade Fonseca</td>
+                                </tr>
+                                <tr>
+                                    <td>Suplente</td>
+                                    <td>Tamires Aparecida Coelho</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Referência</h3>
+
+                        <p class="verde-negrito"><a target="_blank" rel="nofollow" href="http://api.aspecsolidaria.org.br/transparencia/539e84da-e22e-474d-a3b3-66159dd7c260.pdf">Estatuto</a></p>
+                        <div class="divider"></div>
+                        <p class="verde-negrito"><a target="_blank" rel="nofollow" href="http://api.aspecsolidaria.org.br/transparencia/54ef1db6-8f12-45c9-8100-a6e73718eaa8.pdf">Balan&#231;o - 2016</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="conheca-a-aspec" class="slider scrollspy" style="display:table">
+                <div class="container">
+                    <div class="col s12">
+                        <h2>Conhe&#231;a a ASPEC</h2>
+                        <h3>Quem Somos</h3>
+                        <p>A A&ccedil;&atilde;o Solid&aacute;ria &agrave;s Pessoas com C&acirc;ncer - ASPEC &eacute; uma organiza&ccedil;&atilde;o da sociedade civil, fundada em 04 de janeiro de 2012, que atende pessoas portadoras de c&acirc;ncer, que encontram em situa&ccedil;&atilde;o de vulnerabilidade social. Tal entidade foi fundada ap&oacute;s o falecimento de um familiar da sua fundadora, que veio do interior de Minas Gerais juntamente com seu irm&atilde;o para tratamento do c&acirc;ncer em Belo Horizonte, esbarrando em muitas dificuldades, dentre elas o provimento da sua alimenta&ccedil;&atilde;o b&aacute;sica e o acesso a orienta&ccedil;&otilde;es quanto aos seus direitos sociais. A entidade al&eacute;m de prestar assist&ecirc;ncia social e psicol&oacute;gica &agrave;s pessoas portadoras de c&acirc;ncer e seus familiares, busca a difus&atilde;o da informa&ccedil;&atilde;o, sensibiliza&ccedil;&atilde;o e engajamento de atores na luta contra o c&acirc;ncer e/ou diagn&oacute;stico precoce. Para tanto, oferta atendimentos, concess&atilde;o de benef&iacute;cios eventuais, suplementos alimentares, roupas, oficinas de gera&ccedil;&atilde;o de trabalho e renda e fortalecimento de v&iacute;nculos familiar e comunit&aacute;rio, palestras e caminhadas educativas para dissemina&ccedil;&atilde;o da informa&ccedil;&atilde;o referente ao c&acirc;ncer, direitos sociais e dentre outros. A ASPEC n&atilde;o &eacute; conveniada com o poder p&uacute;blico e conta com doa&ccedil;&otilde;es de pessoas f&iacute;sicas e jur&iacute;dicas que sensibilizam com a causa apresentada,
+                            <br />para sua manuten&ccedil;&atilde;o.&nbsp;</p>
+                        <h3>Miss&atilde;o</h3>
+                        <p>Prestar assist&ecirc;ncia social e psicol&oacute;gica &agrave;s pessoas portadoras de c&acirc;ncer independente do g&ecirc;nero, ra&ccedil;a e idade contribuindo com a qualidade do tratamento oncol&oacute;gico. Al&eacute;m de atuar como agente de promo&ccedil;&atilde;o de conhecimentos referente ao diagn&oacute;stico precoce do c&acirc;ncer e/ou tratamento, bem como influenciar a formula&ccedil;&atilde;o da pol&iacute;tica p&uacute;blica de sa&uacute;de e campos afins para gerar a garantia da universalidade, integralidade e equidade na aten&ccedil;&atilde;o &agrave; sa&uacute;de do indiv&iacute;duo.</p>
+                        <h3>Vis&atilde;o</h3>
+                        <p>Ser refer&ecirc;ncia no apoio &agrave;s pessoas portadoras de c&acirc;ncer, no que diz respeito &agrave; qualidade da assist&ecirc;ncia social, psicol&oacute;gica e a promo&ccedil;&atilde;o de melhorias do tratamento oncol&oacute;gico em Minas Gerais.</p>
+                        <h2>Valores</h2>
+                        <h3>Amor</h3>
+                        <p>Refor&ccedil;amos constantemente a pr&aacute;tica do amor, do zelo, do cuidado, compaix&atilde;o, paci&ecirc;ncia e bondade com o outro. Acreditamos que o amor deve ser visto como a base de sustenta&ccedil;&atilde;o de todos os demais princ&iacute;pios e valores da Institui&ccedil;&atilde;o. INTEGRIDADE: Primamos pela honestidade, lisura, justi&ccedil;a, retid&atilde;o e idoneidade, podendo esses serem traduzidos em forma de transpar&ecirc;ncia e verdade. EXCEL&Ecirc;NCIA: Temos o compromisso e o dever com a qualidade dos servi&ccedil;os prestados, buscando sempre fornecer o melhor, independente do que se trata.</p>
+                        <h3>Atitude</h3>
+                        <p>Sabemos agir e reagir frente aos acontecimentos e entraves. Valorizamos a persist&ecirc;ncia, a disposi&ccedil;&atilde;o e a iniciativa na busca pela supera&ccedil;&atilde;o das nossas dificuldades. OTIMISMO: Encaramos as coisas pelo seu lado bom e esperamos sempre uma solu&ccedil;&atilde;o favor&aacute;vel para as situa&ccedil;&otilde;es dif&iacute;ceis.</p>
+                        <h3>Nova&ccedil;&atilde;o ou Inova&ccedil;&atilde;o</h3>
+                        <p>Valorizamos e estimulamos a pr&aacute;tica da criatividade como instrumento para criar e recriar alternativas de supera&ccedil;&atilde;o de obst&aacute;culos, a fim de alcan&ccedil;armos os nossos objetivos.</p>
+                        <h3>Respeito</h3>
+                        <p>Acreditamos que esse deve ser um exerc&iacute;cio di&aacute;rio e que somente com sua pr&aacute;tica poderemos compreender e aceitar as limita&ccedil;&otilde;es, a individualidade e o direito do outro, valorizando as diferen&ccedil;as como fator de desenvolvimento e crescimento.</p>
+                        <h3>Redes Sociais</h3>
+                        <p>Site: <a href="http:www.aspecsolidaria.org.br">www.aspecsolidaria.org.br</a>
+                            <br />Facebook:&nbsp;<a href="https://www.facebook.com/ong.aspec">https://www.facebook.com/ong.aspec</a></p>
+                        <h3>Colabore Doa&ccedil;&otilde;es</h3>
+                        <p>Dep&oacute;sito banc&aacute;rio informar conta e outros meios de doa&ccedil;&atilde;o
+                            <br />Caixa Econ&ocirc;mica Federal
+                            <br />Ag&ecirc;ncia: 2426
+                            <br />Opera&ccedil;&atilde;o: 003
+                            <br />Conta: 1146-7
+                            <br />CNPJ: 15.251.909/0001-90&nbsp;</p>
+                        <h3>Programas &ndash; servi&ccedil;os oferecidos</h3>
+                        <p>Programa de Alimenta&ccedil;&atilde;o B&aacute;sica - PROAB</p>
+                        <ul>
+                            <li>Cesta B&aacute;sica;</li>
+                            <li>Vale G&aacute;s;</li>
+                            <li>Vale Sacol&atilde;o;</li>
+                            <li>Suplementos Alimentares.</li>
+                        </ul>
+                        <p>Programa de Higiene Total - PROHT</p>
+                        <ul>
+                            <li>Produtos de Higiene Pessoal e Limpeza;</li>
+                            <li>Fralda Descart&aacute;vel.</li>
+                        </ul>
+                        <h3>Localiza&ccedil;&atilde;o e contato</h3>
+                        <p>Rua: Padre Paulo Reg&oacute;lio, n&ordm;27 &ndash; C&eacute;u Azul A CEP: 31.585-150 Telefone: (31) 3567-0229 / 3582-7145 <a href="mailto:social@aspecsolidaria.org.br">social@aspecsolidaria.org.br</a>
+                            <br /><a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="o-que-fazemos" class="slider scrollspy" style="display:table">
+                <div class="container">
+                    <div class="col s12">
+                        <h2>O que fazemos</h2>
+                        <h4>Conheça nossos programas</h4>
+
+                        <ul class="collapsible" data-collapsible="accordion">
+
+                            <li>
+                                <div class="collapsible-header">PROAB</div>
+                                <div class="collapsible-body">
+                                    <p>O PROAB (Programa de alimentação básica) foi criado com a finalidade de fornecer ao portador de câncer em tratamento, uma alimentação saudável de acordo com as recomendações de seu médico ou nutricionista.</p>
+                                    <p>A ASPEC intensifica seus trabalhos para o PROAB, pois ele assegura os portadores de câncer assistidos pela instituição o direito de se ter uma dieta saudável e equilibrada. Também lhes ofertando orientações da importância e benefícios do consumo de vitaminas como sustagem, leite, nutrem 1.0, cesta básica, ticket sacolão e ticket gás. Com esses recursos esperamos contribuir satisfatoriamente na melhoria da qualidade de vida não só dos assistidos pela ASPEC, mas também de seus familiares. </p>
+                                    <p>O PROAB é permanente e mantido unicamente através de doações.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Cesta Básica</div>
+                                <div class="collapsible-body">
+                                    <p>Integrada ao PROAB, a cesta básica mensal composta por itens essências diário assegura as famílias desprovidas de recursos financeiros para suprir suas necessidades básicas de alimentação, higiene e limpeza dando aos portadores de câncer assistidos pela ASPEC uma melhoria na qualidade de vida. </p>
+                                    <p>O Programa Cesta Básica é permanente e mantido unicamente através de doações.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Ticket Sacolão</div>
+                                <div class="collapsible-body">
+                                    <p>Integrado ao PROAB, o ticket sacolão assegura as famílias desprovidas de recursos financeiros para suprir suas necessidades básicas a condição de terem em suas refeições uma dieta rica em fibras e vitaminas aumentando significativamente as possibilidades de recuperação do portador de câncer assistidos pela ASPEC. </p>
+                                    <p>O Programa Ticket Sacolão é permanente e mantido unicamente através de doações.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Ticket Gás</div>
+                                <div class="collapsible-body">
+                                    <p>Integrado ao PROAB, o ticket gás assegura as famílias desprovidas de recursos financeiros para suprir suas necessidades básicas o direito de prepararem sua alimentação com dignidade. Vale ressaltar que a ASPEC preocupa com recursos urgentes e indispensáveis. </p>
+                                    <p>O Programa Ticket Gás é permanente e mantido unicamente através de doações.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Voluntariado </div>
+                                <div class="collapsible-body">
+                                    <p>Você pode ser voluntário auxiliando em nossas oficinas de artesanato, na organização dos eventos e nas entregas dos donativos. Caso tenha interesse, entre em contato conosco através do nosso formulário de contato.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <h4>Conheça nossas ações</h4>
+                        <ul class="collapsible" data-collapsible="accordion">
+
+                            <li>
+                                <div class="collapsible-header">Eventos</div>
+                                <div class="collapsible-body">
+                                    <p>Durante todo ano a ASPEC, realiza eventos como bazar, noite de caldo, feijoada e macarronada, a fim de arrecadar fundos para manter suas atividades.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Projetos</div>
+                                <div class="collapsible-body">
+                                    <p>A entidade através dos seus representantes busca efetivar parcerias na realização de projetos importantes para um trabalho continuado com seus assistidos. O projeto Cidadania e Saúde é um projeto continuado onde a entidade realiza palestras e ações para a saúde e bem estar de todos como a caminhada educativa do Outubro Rosa.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Visitas</div>
+                                <div class="collapsible-body">
+                                    <p>A ASPEC em parceria com a Defensoria Pública da União-DPU, e o Conselho Regional da Medicina-CRM, realiza inspeções nos Hospitais que possuem convênio com o Sistema único Saúde – SUS, a fim de aprimorar o diagnóstico precoce e buscar melhorias no tratamento das pessoas com câncer.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">Reuniões</div>
+                                <div class="collapsible-body">
+                                    <p>Encontros mensais de grupo com os usuários são realizados para avaliação dos serviços ofertados, e levantamento de sugestões para agregar ao planejamento de atividades da entidade, com intuito de aprimorar as ofertas institucionais, tornar o usuário co-responsável pela entidade e fortalecer o vínculo de pertencimento do mesmo à instituição, as reuniões são aberta para comunidade e colabores.
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="galeria" class="slider scrollspy" style="display: table; height: 440px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Galeria</h2>
+                            <p>Veja um pouco mais das nossas ações!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- ngRepeat: p in galerias -->
+                        <div ng-repeat="p in galerias" class="ng-scope">
+                            <div class="col s12 m12 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/galeria/belo-horizonte/oficina-de-balao">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/9-oficina-de-balao.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate ng-binding">
+                                            Oficina de Balão
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in galerias -->
+                        <div ng-repeat="p in galerias" class="ng-scope">
+                            <div class="col s6 m6 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/galeria/belo-horizonte/bazar-beneficente">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/5-bazar-beneficente.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate ng-binding">
+                                            Bazar Beneficente
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in galerias -->
+                        <div ng-repeat="p in galerias" class="ng-scope">
+                            <div class="col s6 m6 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/galeria/belo-horizonte/forum-oncoguia">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/7-forum-oncoguia.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate ng-binding">
+                                            Fórum Oncoguia
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in galerias -->
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <a class="waves-effect waves-light btn-large" href="/galeria">veja mais</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="indicators"></ul>
+            </div>
+            <div id="eventos" class="slider scrollspy" style="display: table; height: 440px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Eventos</h2>
+                            <p>Acompanhe em primeira mão nossos eventos!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- ngRepeat: p in eventos -->
+                        <div ng-repeat="p in eventos" class="ng-scope">
+                            <div class="col s6 m6 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/eventos/belo-horizonte/caminhada-rosa-2018">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/noticia/principal/saida_m/9-caminhada-rosa-2018.jpg" alt="Caminhada Rosa 2018" title="Caminhada Rosa 2018">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate">
+                                            <span style="font-weight:bold; font-size:1.3em" class="ng-binding">Caminhada Rosa 2018</span>
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in eventos -->
+                        <div ng-repeat="p in eventos" class="ng-scope">
+                            <div class="col s6 m6 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/eventos/belo-horizonte/macarronada-novembro-azul">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/noticia/principal/saida_m/8-macarronada-novembro-azul.jpg" alt="Macarronada Novembro Azul" title="Macarronada Novembro Azul">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate">
+                                            <span style="font-weight:bold; font-size:1.3em" class="ng-binding">Macarronada Novembro Azul</span>
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in eventos -->
+                        <div ng-repeat="p in eventos" class="ng-scope">
+                            <div class="col s6 m6 l4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a href="/eventos/belo-horizonte/noite-de-caldos-julho-2017">
+                                            <img src="http://api.aspecsolidaria.org.br/imagens/noticia/principal/saida_m/7-noite-de-caldos-julho-2017.jpg" alt="Noite de Caldos - Julho 2017" title="Noite de Caldos - Julho 2017">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="truncate">
+                                            <span style="font-weight:bold; font-size:1.3em" class="ng-binding">Noite de Caldos - Julho 2017</span>
+                                        </p>
+                                        <p class="truncate">
+                                            <span class="verde ng-binding">Belo Horizonte</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: p in eventos -->
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <a class="waves-effect waves-light btn-large" href="/eventos">veja mais</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="indicators"></ul>
+            </div>
+            <div id="faca-sua-doacao" class="slider scrollspy" style="display:table">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Fa&#231;a sua doa&#231;&#227;o</h2>
+                            <p>Dep&oacute;sito banc&aacute;rio informar conta e outros meios de doa&ccedil;&atilde;o
+                                <br />Caixa Econ&ocirc;mica Federal
+                                <br />Ag&ecirc;ncia: 2426
+                                <br />Opera&ccedil;&atilde;o: 003
+                                <br />Conta: 1146-7
+                                <br />CNPJ: 15.251.909/0001-90&nbsp;</p>
+                            <h3>Doa&ccedil;&atilde;o de alimentos</h3>
+                            <p>Ajude tamb&eacute;m doando alimentos n&atilde;o perec&iacute;veis, como cestas-b&aacute;sicas, leite longa vida ou em p&oacute;, suplemento alimentar(Sustagen, Sustain, Nutrein Active, etc), fraldas descart&aacute;veis e vale-transporte.</p>
+                            <h3>Contribui&ccedil;&atilde;o mensal</h3>
+                            <p>Qualquer valor em dinheiro pode ser doado mensalmente. Uma vez por m&ecirc;s entraremos em contato por telefone para retirar em sua resid&ecirc;ncia, para moradores da Grande BH. Para mais informa&ccedil;&otilde;es, entre em contato conosco.</p>
+                            <div class="grande">
+                                <table class="highlight responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Itens</th>
+                                            <th>Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20 fraldas geri&aacute;tricas</td>
+                                            <td>R$ 25,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>08 passagens de &ocirc;nibus para Quimio e Radioterapia</td>
+                                            <td>R$ 30,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02 latas de suplemento alimentar</td>
+                                            <td>R$ 50,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01 cesta b&aacute;sica de 30kg</td>
+                                            <td>R$ 100,00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+
+                                <div class="pequeno">
+                                    <div class="row">
+
+                                        <div class="col s12">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <p>20 fraldas geriátricas</p>
+                                                </div>
+                                                <div class="card-action">
+                                                    R$ 25,00
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col s12">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <p>08 passagens de ônibus para Quimio e Radioterapia</p>
+                                                </div>
+                                                <div class="card-action">
+                                                    R$ 30,00
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col s12">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <p>02 latas de suplemento alimentar</p>
+                                                </div>
+                                                <div class="card-action">
+                                                    R$ 50,00
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col s12">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <p>01 cesta básica de 30kg</p>
+                                                </div>
+                                                <div class="card-action">
+                                                    R$ 100,00
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                                <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+                                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                                    <input type="hidden" name="currency" value="BRL" />
+                                    <input type="hidden" name="receiverEmail" value="financeiro@aspecsolidaria.org.br" />
+                                    <input type="hidden" name="iot" value="button" />
+                                    <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                </form>
+                                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+                            </div>
+                        </div>
+
+                        <div id="contato">
+                            <div class="row">
+                                <div class="col s12">
+                                    <h2>Entre em contato</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6 l6">
+
+                                </div>
+                                <div class="col s11 m6 l6">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="nome" type="text" class="validate" ng-model="nome">
+                                            <label for="nome">Nome</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="email" class="validate" ng-model="email">
+                                            <label for="email" data-error="Verifique seu Email" data-success="Seu Email foi inserido corretamente!">Email</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="telefone" type="text" class="validate" ng-model="telefone">
+                                            <label for="telefone">Telefone</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="cidade" type="text" class="validate" ng-model="cidade">
+                                            <label for="cidade">Cidade</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <select id="estado" ng-model="estado">
+                                                <option value="" disabled selected>-- Selecione --</option>
+                                                <option value="AC">AC</option>
+                                                <option value="AL">AL</option>
+                                                <option value="AP">AP</option>
+                                                <option value="AM">AM</option>
+                                                <option value="BA">BA</option>
+                                                <option value="CE">CE</option>
+                                                <option value="DF">DF</option>
+                                                <option value="ES">ES</option>
+                                                <option value="GO">GO</option>
+                                                <option value="MA">MA</option>
+                                                <option value="MT">MT</option>
+                                                <option value="MS">MS</option>
+                                                <option value="MG">MG</option>
+                                                <option value="PA">PA</option>
+                                                <option value="PB">PB</option>
+                                                <option value="PR">PR</option>
+                                                <option value="PE">PE</option>
+                                                <option value="PI">PI</option>
+                                                <option value="RJ">RJ</option>
+                                                <option value="RN">RN</option>
+                                                <option value="RS">RS</option>
+                                                <option value="RO">RO</option>
+                                                <option value="RR">RR</option>
+                                                <option value="SC">SC</option>
+                                                <option value="SP">SP</option>
+                                                <option value="SE">SE</option>
+                                                <option value="TO">TO</option>
+                                            </select>
+                                            <label for="estado">Estado</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <textarea id="mensagem" class="materialize-textarea" ng-model="mensagem"></textarea>
+                                            <label for="mensagem">Mensagem</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input type="checkbox" ng-model="newsletter" id="newsletter" class="filled-in" />
+                                                <label for="newsletter">Desejo receber dicas e novidades</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <a id="btn-enviar" class="btn waves-effect waves-light" ng-click="enviarContato()">
+                                        Enviar
+                                        <i class="material-icons right">send</i>
+                                    </a>
+                                        </div>
+                                    </div>
+                                    <div id="preloader-form" class="row preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="gap-patch">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
+        <script src="/Scripts/angular.min.js"></script>
+        <script src="Scripts/angular-sanitize.min.js"></script>
+        <script src="Scripts/angular-cookies.min.js"></script>
+        <script src="Scripts/dirPagination.js"></script>
+
+        <script type="text/javascript" src="app/site/bundle/app.min.js"></script>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row" style="margin-top:30px; margin-bottom:30px">
+                    <div class="col l6 s12">
+                        <p class="text-lighten-4">
+                            <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
+                            <br />
+                            <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                        </p>
+                        <p class="text-lighten-4">
+                            <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5>Navegação</h5>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="transparencia" rel="follow">Transparência</a></li>
+                            <li><a href="conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                            <li><a href="oquefazemos" rel="nofollow">O que fazemos</a></li>
+                            <li><a href="galeria">Galeria</a></li>
+                            <li><a href="eventos">Eventos</a></li>
+                            <li><a href="facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+
+                            <li><a href="/contato" rel="nofollow">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+                    <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+                </div>
+            </div>
+        </footer>
+        <script src="app/bundle//site.min.js"></script>
+        <script type="text/javascript" src="js/vegas.min.js"></script>
+        <script>
+            $(".banner").vegas({
+                slides: [{
+                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg"
+                }, {
+                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg"
+                }, {
+                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg"
+                }],
+                animation: ['kenburnsUp']
+            });
+
+            function GetHeight() {
+                var h = window.innerHeight;
+                $(".banner").css({
+                    "height": h
+                });
+            };
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.button-collapse').sideNav();
+                $('.slider').slider({
+                    full_width: true
+                });
+                $('.scrollspy').scrollSpy();
+                $('select').material_select();
+                $('#preloader-form').hide();
+                $('.carousel').carousel();
+                $('.materialboxed').materialbox();
+                $('.collapsible').collapsible();
+            });
+        </script>
+</body>
+
+</html>

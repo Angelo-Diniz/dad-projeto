@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="pt-br">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href=imagens/favicon.ico" type="image/x-icon" />
+    <meta name="author" content="www.clicksolucoesweb.com.br" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="app/bundle/site.min.css" />
+    <title>Eventos</title>
+    <meta name="description" content="Eventos" />
+    <meta name="keywords" content="Eventos" />
+    <meta name="robots" content="index, follow" />
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">
+                    <img src=imagens/aspec.png" alt="Eventos" title="Eventos" />
+                </a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down table-of-contents">
+                    <li><a href="/">Home</a></li>
+                    <li><a href=transparencia">Transparência</a></li>
+                    <li><a href=conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href=oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href=galeria">Galeria</a></li>
+                    <li><a href=eventos">Eventos</a></li>
+                    <li><a class="waves-effect waves-light btn-large" href=facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+                <ul class="side-nav table-of-contents" id="mobile">
+                    <li><a href="/">Home</a></li>
+                    <li><a href=transparencia">Transparência</a></li>
+                    <li><a href=conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href=oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href=galeria">Galeria</a></li>
+                    <li><a href=eventos">Eventos</a></li>
+                    <li><a href=facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<div ng-app="App" ng-controller="EventosCtrl" ng-init="getPagina()">
+    <div id="progress" class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <div hidden id="container" class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1>Eventos</h1>
+                <p>Acompanhe em primeira mão nossos eventos!</p>
+            </div>
+            <div class="row">
+                <div ng-repeat="p in eventos">
+<div class="col s6 m6 l4">
+    <div class="card">
+        <div class="card-image">
+            <a href=eventos/{{ p.cidade.parametro }}/{{ p.parametro }}">
+                <img src="http://api.aspecsolidaria.org.br/imagens/noticia/principal/saida_m/{{ p.codigo }}-{{ p.parametro }}.jpg" alt="{{p.titulo}}" title="{{p.titulo}}" />
+            </a>
+        </div>
+        <div class="card-content">
+            <p class="truncate">
+                <span style="font-weight:bold; font-size:1.3em">{{ p.titulo }}</span>
+            </p>
+            <p class="truncate">
+                <span class="verde">{{ p.cidade.descricao }}</span>
+            </p>
+            
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src=Scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src=Scripts/materialize/materialize.min.js"></script><script src=Scripts/angular.min.js"></script>
+<script src=Scripts/angular-sanitize.min.js"></script>
+<script src=Scripts/angular-cookies.min.js"></script>
+<script src=Scripts/dirPagination.js"></script>
+
+<script type="text/javascript" src=app/site/bundle/app.min.js"></script>
+<script type="text/javascript" src=app/site/index.js"></script>
+
+ <footer class="page-footer">
+    <div class="container">
+        <div class="row" style="margin-top:30px; margin-bottom:30px">
+            <div class="col l6 s12">
+                <p class="text-lighten-4">
+                    <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a><br />
+                    <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                </p>
+                <p class="text-lighten-4">
+                    <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href=transparencia" rel="follow">Transparência</a></li>
+                    <li><a href=conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                    <li><a href=oquefazemos" rel="nofollow">O que fazemos</a></li>
+                    <li><a href=galeria">Galeria</a></li>
+                    <li><a href=eventos">Eventos</a></li>
+                    <li><a href=facasuadoacao" rel="nofollow">Faça sua doação</a></li>
+                    
+                    
+                    <li><a href=contato" rel="nofollow">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+            <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+        </div>
+    </div>
+</footer>
+<script src=app/bundle/site.min.js"></script>
+<script type="text/javascript" src=js/vegas.min.js"></script>
+<script>
+    $(".banner").vegas({
+        slides: [
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg" },
+            { src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg" }
+        ],
+        animation: ['kenburnsUp']
+    });
+    function GetHeight() {
+        var h = window.innerHeight;
+        $(".banner").css({ "height": h });
+    };
+</script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+            $('.slider').slider({ full_width: true });
+            $('.scrollspy').scrollSpy();
+            $('select').material_select();
+            $('#preloader-form').hide();
+            $('.carousel').carousel();
+            $('.materialboxed').materialbox();
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>
