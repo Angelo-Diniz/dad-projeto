@@ -557,6 +557,48 @@
 
                                     </div>
                                 </div>
+
+                                <!--    INICIO MODAL    -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoacaoEmail">
+                                    Envie-me um email
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalDoacaoEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Doação por e-mail</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <select class="mdb-select md-form" id="valorSelecionado" required="">
+                                                    <option value="" selected>Selecione um valor</option>
+                                                    <option value="50">R$5,00</option>
+                                                    <option value="10">R$10,00</option>
+                                                    <option value=15>R$15,00</option>
+                                                    <option value="20">R$20,00</option>
+                                                    <option value="30">R$30,00</option>
+                                                    <option value="50">R$50,00</option>
+                                                </select>
+                                              
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">E-mail</label>
+                                                    <input type="text" id="emailDoador" class="form-group" required="">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                    <button type="button" class="btn btn-primary" id="enviarEmail" >enviar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--    FIM MODAL   -->
+                                <br>
+                                <br>
                                 <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
                                 <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
                                     <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
@@ -567,96 +609,95 @@
                                 </form>
                                 <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
                             </div>
-                        </div>
-
-                        <div id="contato">
-                            <div class="row">
-                                <div class="col s12">
-                                    <h2>Entre em contato</h2>
+                            <div id="contato">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h2>Entre em contato</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s12 m6 l6">
+                                <div class="row">
+                                    <div class="col s12 m6 l6">
 
-                                </div>
-                                <div class="col s11 m6 l6">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="nome" type="text" class="validate" ng-model="nome">
-                                            <label for="nome">Nome</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="email" type="email" class="validate" ng-model="email">
-                                            <label for="email" data-error="Verifique seu Email" data-success="Seu Email foi inserido corretamente!">Email</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="telefone" type="text" class="validate" ng-model="telefone">
-                                            <label for="telefone">Telefone</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="cidade" type="text" class="validate" ng-model="cidade">
-                                            <label for="cidade">Cidade</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <select id="estado" ng-model="estado">
-                                                <option value="" disabled selected>-- Selecione --</option>
-                                                <option value="AC">AC</option>
-                                                <option value="AL">AL</option>
-                                                <option value="AP">AP</option>
-                                                <option value="AM">AM</option>
-                                                <option value="BA">BA</option>
-                                                <option value="CE">CE</option>
-                                                <option value="DF">DF</option>
-                                                <option value="ES">ES</option>
-                                                <option value="GO">GO</option>
-                                                <option value="MA">MA</option>
-                                                <option value="MT">MT</option>
-                                                <option value="MS">MS</option>
-                                                <option value="MG">MG</option>
-                                                <option value="PA">PA</option>
-                                                <option value="PB">PB</option>
-                                                <option value="PR">PR</option>
-                                                <option value="PE">PE</option>
-                                                <option value="PI">PI</option>
-                                                <option value="RJ">RJ</option>
-                                                <option value="RN">RN</option>
-                                                <option value="RS">RS</option>
-                                                <option value="RO">RO</option>
-                                                <option value="RR">RR</option>
-                                                <option value="SC">SC</option>
-                                                <option value="SP">SP</option>
-                                                <option value="SE">SE</option>
-                                                <option value="TO">TO</option>
-                                            </select>
-                                            <label for="estado">Estado</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <textarea id="mensagem" class="materialize-textarea" ng-model="mensagem"></textarea>
-                                            <label for="mensagem">Mensagem</label>
-                                        </div>
+                                    </div>
+                                    <div class="col s11 m6 l6">
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="checkbox" ng-model="newsletter" id="newsletter" class="filled-in" />
-                                                <label for="newsletter">Desejo receber dicas e novidades</label>
+                                                <input id="nome" type="text" class="validate" ng-model="nome">
+                                                <label for="nome">Nome</label>
                                             </div>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <a id="btn-enviar" class="btn waves-effect waves-light" ng-click="enviarContato()">
+                                            <div class="input-field col s12">
+                                                <input id="email" type="email" class="validate" ng-model="email">
+                                                <label for="email" data-error="Verifique seu Email" data-success="Seu Email foi inserido corretamente!">Email</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="telefone" type="text" class="validate" ng-model="telefone">
+                                                <label for="telefone">Telefone</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="cidade" type="text" class="validate" ng-model="cidade">
+                                                <label for="cidade">Cidade</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <select id="estado" ng-model="estado">
+                                                    <option value="" disabled selected>-- Selecione --</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AP">AP</option>
+                                                    <option value="AM">AM</option>
+                                                    <option value="BA">BA</option>
+                                                    <option value="CE">CE</option>
+                                                    <option value="DF">DF</option>
+                                                    <option value="ES">ES</option>
+                                                    <option value="GO">GO</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MG">MG</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="PB">PB</option>
+                                                    <option value="PR">PR</option>
+                                                    <option value="PE">PE</option>
+                                                    <option value="PI">PI</option>
+                                                    <option value="RJ">RJ</option>
+                                                    <option value="RN">RN</option>
+                                                    <option value="RS">RS</option>
+                                                    <option value="RO">RO</option>
+                                                    <option value="RR">RR</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SP">SP</option>
+                                                    <option value="SE">SE</option>
+                                                    <option value="TO">TO</option>
+                                                </select>
+                                                <label for="estado">Estado</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <textarea id="mensagem" class="materialize-textarea" ng-model="mensagem"></textarea>
+                                                <label for="mensagem">Mensagem</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input type="checkbox" ng-model="newsletter" id="newsletter" class="filled-in" />
+                                                    <label for="newsletter">Desejo receber dicas e novidades</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <a id="btn-enviar" class="btn waves-effect waves-light" ng-click="enviarContato()">
                                         Enviar
                                         <i class="material-icons right">send</i>
                                     </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div id="preloader-form" class="row preloader-wrapper small active">
-                                        <div class="spinner-layer spinner-green-only">
-                                            <div class="circle-clipper left">
-                                                <div class="circle"></div>
-                                            </div>
-                                            <div class="gap-patch">
-                                                <div class="circle"></div>
-                                            </div>
-                                            <div class="circle-clipper right">
-                                                <div class="circle"></div>
+                                        <div id="preloader-form" class="row preloader-wrapper small active">
+                                            <div class="spinner-layer spinner-green-only">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -666,86 +707,87 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
-        <script src="/Scripts/angular.min.js"></script>
-        <script src="Scripts/angular-sanitize.min.js"></script>
-        <script src="Scripts/angular-cookies.min.js"></script>
-        <script src="Scripts/dirPagination.js"></script>
+            <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+            <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
+            <script src="/Scripts/angular.min.js"></script>
+            <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+            <script src="Scripts/angular-sanitize.min.js"></script>
+            <script src="Scripts/angular-cookies.min.js"></script>
+            <script src="Scripts/dirPagination.js"></script>
 
-        <script type="text/javascript" src="app/site/bundle/app.min.js"></script>
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row" style="margin-top:30px; margin-bottom:30px">
-                    <div class="col l6 s12">
-                        <p class="text-lighten-4">
-                            <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
-                            <br />
-                            <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
-                        </p>
-                        <p class="text-lighten-4">
-                            <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                        </p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5>Navegação</h5>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="transparencia" rel="follow">Transparência</a></li>
-                            <li><a href="conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
-                            <li><a href="oquefazemos" rel="nofollow">O que fazemos</a></li>
-                            <li><a href="galeria">Galeria</a></li>
-                            <li><a href="eventos">Eventos</a></li>
-                            <li><a href="facasuadoacao" rel="nofollow">Faça sua doação</a></li>
-
-                            <li><a href="/contato" rel="nofollow">Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
+            <script type="text/javascript" src="app/site/bundle/app.min.js"></script>
+            <footer class="page-footer">
                 <div class="container">
-                    2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
-                    <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
-                </div>
-            </div>
-        </footer>
-        <script src="app/bundle//site.min.js"></script>
-        <script type="text/javascript" src="js/vegas.min.js"></script>
-        <script>
-            $(".banner").vegas({
-                slides: [{
-                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg"
-                }, {
-                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg"
-                }, {
-                    src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg"
-                }],
-                animation: ['kenburnsUp']
-            });
+                    <div class="row" style="margin-top:30px; margin-bottom:30px">
+                        <div class="col l6 s12">
+                            <p class="text-lighten-4">
+                                <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
+                                <br />
+                                <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                            </p>
+                            <p class="text-lighten-4">
+                                <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            </p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5>Navegação</h5>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="transparencia" rel="follow">Transparência</a></li>
+                                <li><a href="conhecaaaspec" rel="nofollow">Conheça a ASPEC</a></li>
+                                <li><a href="oquefazemos" rel="nofollow">O que fazemos</a></li>
+                                <li><a href="galeria">Galeria</a></li>
+                                <li><a href="eventos">Eventos</a></li>
+                                <li><a href="facasuadoacao" rel="nofollow">Faça sua doação</a></li>
 
-            function GetHeight() {
-                var h = window.innerHeight;
-                $(".banner").css({
-                    "height": h
+                                <li><a href="/contato" rel="nofollow">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+                        <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+                    </div>
+                </div>
+            </footer>
+            <script src="app/bundle//site.min.js"></script>
+            <script type="text/javascript" src="js/vegas.min.js"></script>
+            <script type="text/javascript" src="js/acoesNovas.js"></script>
+            <script>
+                $(".banner").vegas({
+                    slides: [{
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg"
+                    }, {
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg"
+                    }, {
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg"
+                    }],
+                    animation: ['kenburnsUp']
                 });
-            };
-        </script>
-        <script>
-            $(document).ready(function() {
-                $('.button-collapse').sideNav();
-                $('.slider').slider({
-                    full_width: true
+
+                function GetHeight() {
+                    var h = window.innerHeight;
+                    $(".banner").css({
+                        "height": h
+                    });
+                };
+            </script>
+            <script>
+                $(document).ready(function() {
+                    $('.button-collapse').sideNav();
+                    $('.slider').slider({
+                        full_width: true
+                    });
+                    $('.scrollspy').scrollSpy();
+                    $('select').material_select();
+                    $('#preloader-form').hide();
+                    $('.carousel').carousel();
+                    $('.materialboxed').materialbox();
+                    $('.collapsible').collapsible();
                 });
-                $('.scrollspy').scrollSpy();
-                $('select').material_select();
-                $('#preloader-form').hide();
-                $('.carousel').carousel();
-                $('.materialboxed').materialbox();
-                $('.collapsible').collapsible();
-            });
-        </script>
+            </script>
 </body>
 
 </html>
