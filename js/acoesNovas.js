@@ -3,10 +3,10 @@ $(document).ready(function(){
 
         try {
             if ($("#emailDoador").val() !== "" && $("#valorSelecionado option:selected").val() !== ""){
-                location.reload();
+         
                 if(dispararEmail($("#emailDoador").val(), $("#valorSelecionado option:selected").val())){
                     alert("Enviado!");
-                    location.reload();
+                    document.location.reload(true);
                 }
                 else {
                     alert("Desculpe! \nTivemos um problema. Tente mais tarde!");
