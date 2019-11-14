@@ -1,101 +1,55 @@
-@charset "UTF-8";
-
-/* CSS Document */
-
-#page_Conteiner {
-	width: 100%;
-	margin: auto;
+.containter_login{
+	margin-top : 100px;
 }
 
-.card {
-	margin: 3px;
+.user_card {
+	height: 400px;
+	width: 350px;
+	margin-top: auto;
+	margin-bottom: auto;
+	background: hsl(156, 32%, 68%);
 	position: relative;
-	float: left;
-	height: 550px;
-	text-align: center;
-	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+
+
 }
-
-.card h5 {
-	text-align: center;
-}
-
-.card p {
-	font-weight: bold;
-}
-
-.card img {
-	height: 300px;
-}
-
-.card button {
-	margin: 3px;
-}
-
-#verReceita {
-	align-items: center;
-	width: 80%;	
-}
-
-#conteudoHome {
-	background-color: wheat;
-}
-
-#conteudo{
-
-	margin: 0px;
-}
-
-.logo {
-	height: 80px;
-	float: left;
+.brand_logo_container {
+	position: absolute;
+	border-radius: 50%;
+	background: hsl(156, 32%, 68%);
+	padding: 10px;
 	text-align: center;
 }
 
-.logo img {
-	height: auto;
-	max-height: 180px;
-	max-width: 100%	;
-}
-
-.menu {
-	float: left;
-	padding-top: 60px;
-	padding-bottom: 80px;
-}
-
-.caminhoPao {
-	opacity: 0.7;
-}
-
-.caminhoPao ul {
-
-	color: blue;
-}
-
-.breadcrumb {
-	opacity: 0.7;
-}
-
-.imagem img{
-	height: auto;
-	max-width: 100%	;
-	margin: 10px;
-	margin-top: -10px;
-	max-height: 20%;
-}
-
-.descricao {
-	margin: 10px;
-}
-
-.rodape {
+.form_container {
 	margin-top: 100px;
-	margin-bottom: 10px;
-
 }
-.rodape p{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	text-align: center;
-	font-size: 15px;
+.login_btn {
+	width: 100%;
+	background: #038a52 !important;
+	color: white !important;
+}
+.login_btn:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+.login_container {
+	padding: 0 2rem;
+}
+.input-group-text {
+	background: #038a52 !important;
+	color: white !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+	background: #038a52 !important;
 }
