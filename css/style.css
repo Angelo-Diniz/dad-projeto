@@ -1,5 +1,5 @@
 .containter_login{
-	margin-top : 100px;
+	margin-top : 2%;
 }
 
 .user_card {
@@ -52,4 +52,8 @@
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	background: #038a52 !important;
+}
+
+.modal_Dialog{
+	background: hsl(156, 32%, 68%);
 }
