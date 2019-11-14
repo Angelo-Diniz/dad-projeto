@@ -3,14 +3,14 @@ $(document).ready(function(){
 
         try {
             if ($("#emailDoador").val() !== "" && $("#valorSelecionado option:selected").val() !== ""){
-
+                location.reload();
                 if(dispararEmail($("#emailDoador").val(), $("#valorSelecionado option:selected").val())){
                     alert("Enviado!");
                     location.reload();
                 }
                 else {
                     alert("Desculpe! \nTivemos um problema. Tente mais tarde!");
-                    location.reload();
+                    
                 }
             }
             else{
