@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--OK!-->
+<html>
+
+<head lang="pt-br">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!--bibliotecas bootstrap-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--bibliotecas bootstrap-->
+    <!--bibliotecas bootstrap-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <meta name="author" content="www.clicksolucoesweb.com.br" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/vegas.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="app/bundle/site.min.css" />
+    <title>ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG</title>
+    <meta name="description" content="ONG de apoio ao tratamento de c&#226;ncer - Fa&#231;a sua doa&#231;&#227;o para institui&#231;&#227;o de tratamento de c&#226;ncer - Ajude os portadores de c&#226;ncer a melhorar a sua qualidade de vi" />
+    <meta name="keywords" content="aspec, ong, tratamento de c&#226;ncer, doa&#231;&#227;o para tratamento de c&#226;ncer, ajuda ao portador de c&#226;ncer, bh, mg" />
+    <meta name="robots" content="index, follow" />
+</head>
+
+<body onload="GetHeight()">
+    <div class="navbar-fixed">
+        <nav>
+                <div class="nav-wrapper">
+                        <a href="index.html" class="brand-logo">
+                            <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
+                        </a>
+                        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down table-of-contents">
+                            <li><a href="index.html">ASPEC</a></li>                    
+                            <li><a href="page_transparencia.html">Transparência</a></li>
+                            <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
+                            <li><a href="page_galeria.html">Galeria</a></li>
+                            <li><a href="page_evento.html">Eventos</a></li>                    
+                            <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_login.html">Login/ Cadastro</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
+                        </ul>
+                        <ul class="side-nav table-of-contents" id="mobile">
+                            <li><a href="index.html">ASPEC</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_login.html">Login/ Cadastro</a></li>
+                            <li><a href="page_transparencia.html">Transparência</a></li>
+                            <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
+                            <li><a href="page_galeria.html">Galeria</a></li>
+                            <li><a href="page_evento.html">Eventos</a></li>
+                            <li><a href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
+                            <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
+                        </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+            <div class="col s12">
+                <h2>Entre em contato</h2>
+             </div>
+         </div>
+         
+         <div class="row">
+            <div class="col s11 m6 l6">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="nome" type="text" class="validate" ng-model="nome">
+                        <label for="nome">Nome</label>
+                    </div>
+                    <div class="input-field col s12">
+                         <input id="email" type="email" class="validate" ng-model="email">
+                         <label for="email" data-error="Verifique seu Email" data-success="Seu Email foi inserido corretamente!">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="telefone" type="text" class="validate" ng-model="telefone">
+                        <label for="telefone">Telefone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="cidade" type="text" class="validate" ng-model="cidade">
+                        <label for="cidade">Cidade</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="estado" ng-model="estado">
+                            <option value="" disabled selected>-- Selecione --</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                        <label for="estado">Estado</label>
+                    </div>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="mensagem" class="materialize-textarea" ng-model="mensagem"></textarea>
+                    <label for="mensagem">Mensagem</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="checkbox" ng-model="newsletter" id="newsletter" class="filled-in" />
+                        <label for="newsletter">Desejo receber dicas e novidades</label>
+                    </div>
+                </div>
+                <div class="input-field col s12">
+                        <a id="btn-enviar" class="btn waves-effect waves-light" ng-click="enviarContato()">
+                        Enviar
+                        <i class="material-icons right">send</i></a>
+                </div>
+                <div id="preloader-form" class="row preloader-wrapper small active">
+                    <div class="spinner-layer spinner-green-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>				
+                    </div>
+                </div>   
+            </div>
+        </div>
+            <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+            <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
+            <script src="/Scripts/angular.min.js"></script>
+            <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+            <script src="Scripts/angular-sanitize.min.js"></script>
+            <script src="Scripts/angular-cookies.min.js"></script>
+            <script src="Scripts/dirPagination.js"></script>
+
+            <script type="text/javascript" src="app/site/bundle/app.min.js"></script>
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row" style="margin-top:30px; margin-bottom:30px">
+                        <div class="col l6 s12">
+                            <p class="text-lighten-4">
+                                <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
+                                <br />
+                                <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
+                            </p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                                <h5>Navegação</h5>
+                                <ul>
+                                    <li><a href="index.html">ASPEC</a></li>
+                                    <li><a href="page_transparencia.html" rel="follow">Transparência</a></li>
+                                    <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
+                                    <li><a href="page_galeria.html">Galeria</a></li>
+                                    <li><a href="page_evento.html">Eventos</a></li>
+                                    <li><a href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
+                                    <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
+                        <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+                    </div>
+                </div>
+            </footer>
+            <script src="app/bundle//site.min.js"></script>
+            <script type="text/javascript" src="js/vegas.min.js"></script>
+            <script type="text/javascript" src="Scripts/acoes_distribuidas.js"></script>
+            <script>
+                $(".banner").vegas({
+                    slides: [{
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/1.jpg"
+                    }, {
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/2.jpg"
+                    }, {
+                        src: "http://api.aspecsolidaria.org.br/imagens/banner/saida/3.jpg"
+                    }],
+                    animation: ['kenburnsUp']
+                });
+
+                function GetHeight() {
+                    var h = window.innerHeight;
+                    $(".banner").css({
+                        "height": h
+                    });
+                };
+            </script>
+            <script>
+                $(document).ready(function() {
+                    $('.button-collapse').sideNav();
+                    $('.slider').slider({
+                        full_width: true
+                    });
+                    $('.scrollspy').scrollSpy();
+                    $('select').material_select();
+                    $('#preloader-form').hide();
+                    $('.carousel').carousel();
+                    $('.materialboxed').materialbox();
+                    $('.collapsible').collapsible();
+                });
+            </script>
+        </div>
+            
+</body>
+
+</html>

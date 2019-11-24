@@ -30,82 +30,116 @@
 </head>
 
 <body onload="GetHeight()">
-        <div class="navbar-fixed">
-                <nav>
-                        <div class="nav-wrapper">
-                                <a href="index.html" class="brand-logo">
-                                    <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
-                                </a>
-                                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-                                <ul class="right hide-on-med-and-down table-of-contents">
-                                    <li><a href="index.html">ASPEC</a></li>                    
-                                    <li><a href="page_transparencia.html">Transparência</a></li>
-                                    <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
-                                    <li><a href="page_galeria.html">Galeria</a></li>
-                                    <li><a href="page_evento.html">Eventos</a></li>                    
-                                    <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
-                                    <li><a class="waves-effect waves-light btn-large" href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
-                                </ul>
-                                <ul class="side-nav table-of-contents" id="mobile">
-                                    <li><a href="index.html">ASPEC</a></li>
-                                    <li><a class="waves-effect waves-light btn-large" href="page_login.html">Login/ Cadastro</a></li>
-                                    <li><a href="page_transparencia.html">Transparência</a></li>
-                                    <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
-                                    <li><a href="page_galeria.html">Galeria</a></li>
-                                    <li><a href="page_evento.html">Eventos</a></li>
-                                    <li><a href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
-                                    <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
-                                </ul>
-                    </div>
-                </nav>
+    <div class="navbar-fixed">
+        <nav>
+                <div class="nav-wrapper">
+                        <a href="index.html" class="brand-logo">
+                            <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
+                        </a>
+                        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down table-of-contents">
+                            <li><a href="index.html">ASPEC</a></li>                    
+                            <li><a href="page_transparencia.html">Transparência</a></li>
+                            <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
+                            <li><a href="page_galeria.html">Galeria</a></li>
+                            <li><a href="page_evento.html">Eventos</a></li>                    
+                            <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_login.html">Login/ Cadastro</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
+                        </ul>
+                        <ul class="side-nav table-of-contents" id="mobile">
+                            <li><a href="index.html">ASPEC</a></li>
+                            <li><a class="waves-effect waves-light btn-large" href="page_login.html">Login/ Cadastro</a></li>
+                            <li><a href="page_transparencia.html">Transparência</a></li>
+                            <li><a href="page_oquefazemos.html" rel="nofollow">O que fazemos</a></li>
+                            <li><a href="page_galeria.html">Galeria</a></li>
+                            <li><a href="page_evento.html">Eventos</a></li>
+                            <li><a href="page_doacao.html" rel="nofollow">Faça sua doação</a></li>
+                            <li><a href="page_contato.html" rel="nofollow">Contato</a></li>
+                        </ul>
             </div>
+        </nav>
+    </div>
 
-    <div ng-app="App" ng-controller="IndexCtrl" ng-init="getPagina()">
-        <div id="progress" class="container">
-            <div class="indeterminate"></div>
-        </div>
-        <div id="container">
-
-                <div class="d-flex justify-content-center containter_login">
-                        <div class="user_card">
-                            <div class="d-flex justify-content-center">
-                                <div class="brand_logo_container">
-                                    <img src="imagens/aspec.png" class="brand_logo" alt="Logo">
+    <div id="galeria" class="slider scrollspy" style="display: table; height: 440px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Galeria</h2>
+                        <p>Veja um pouco mais das nossas ações!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- ngRepeat: p in galerias -->
+                    <div ng-repeat="p in galerias" class="ng-scope" style="height: 440px; width:340px">
+                        <div class="col s12 m12 l4" >
+                            <div class="card" style="height: 400px; width:300px">
+                                <div class="card-image" style="height: 400px; width:300px">
+                                    <a href="/galeria/belo-horizonte/oficina-de-balao">
+                                        <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/9-oficina-de-balao.jpg">
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-center form_container">
-                                <form>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                        </div>
-                                        <input type="text" name="" class="form-control input_user" value="" placeholder="e-mail">
-                                    </div>
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                        </div>
-                                        <input type="password" name="" class="form-control input_pass" value="" placeholder="senha">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Lembrar-me</label>
-                                        </div>
-                                    </div>
-                                        <div class="d-flex justify-content-center mt-3 login_container">
-                                 <button type="button" name="button" class="btn login_btn">Entrar</button>
-                               </div>
-                                </form>
-                            </div>
-                    
-                            <div class="mt-4">
-                                <div class="d-flex justify-content-center links">
-                                    Não possui uma conta ? <a href="page_cadastro.html" class="ml-2">Cadastre-se</a>
+                                <div class="card-content">
+                                    <p class="truncate ng-binding">
+                                        Oficina de Balão
+                                    </p>
+                                    <p class="truncate">
+                                        <span class="verde ng-binding">Belo Horizonte</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- end ngRepeat: p in galerias -->
+                    <div ng-repeat="p in galerias" class="ng-scope" style="height: 440px; width:340px">
+                        <div class="col s6 m6 l4">
+                            <div class="card" style="height: 400px; width:300px">
+                                <div class="card-image" style="height: 400px; width:300px">
+                                    <a href="/galeria/belo-horizonte/bazar-beneficente">
+                                        <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/5-bazar-beneficente.jpg">
+                                    </a>
+                                </div>
+                                <div class="card-content">
+                                    <p class="truncate ng-binding">
+                                        Bazar Beneficente
+                                    </p>
+                                    <p class="truncate">
+                                        <span class="verde ng-binding">Belo Horizonte</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end ngRepeat: p in galerias -->
+                    <div ng-repeat="p in galerias" class="ng-scope" style="height: 440px; width:340px">
+                        <div class="col s6 m6 l4">
+                            <div class="card" style="height: 400px; width:300px">
+                                <div class="card-image" style="height: 400px; width:300px">
+                                    <a href="/galeria/belo-horizonte/forum-oncoguia">
+                                        <img src="http://api.aspecsolidaria.org.br/imagens/galeria/principal/saida_m/7-forum-oncoguia.jpg">
+                                    </a>
+                                </div>
+                                <div class="card-content">
+                                    <p class="truncate ng-binding">
+                                        Fórum Oncoguia
+                                    </p>
+                                    <p class="truncate">
+                                        <span class="verde ng-binding">Belo Horizonte</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end ngRepeat: p in galerias -->
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <a class="waves-effect waves-light btn-large" href="/galeria">veja mais</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="indicators"></ul>
+        </div>
 
             <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
             <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
