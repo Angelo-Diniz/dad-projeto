@@ -53,6 +53,48 @@
             <div class="indeterminate"></div>
         </div>
         <div id="container">
+
+                <div class="d-flex justify-content-center containter_login">
+                        <div class="user_card">
+                            <div class="d-flex justify-content-center">
+                                <div class="brand_logo_container">
+                                    <img src="imagens/aspec.png" class="brand_logo" alt="Logo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center form_container">
+                                <form>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <input type="text" name="" class="form-control input_user" value="" placeholder="e-mail">
+                                    </div>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input type="password" name="" class="form-control input_pass" value="" placeholder="senha">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                            <label class="custom-control-label" for="customControlInline">Lembrar-me</label>
+                                        </div>
+                                    </div>
+                                        <div class="d-flex justify-content-center mt-3 login_container">
+                                 <button type="button" name="button" class="btn login_btn">Entrar</button>
+                               </div>
+                                </form>
+                            </div>
+                    
+                            <div class="mt-4">
+                                <div class="d-flex justify-content-center links">
+                                    Não possui uma conta ? <a href="page_cadastro.html" class="ml-2">Cadastre-se</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
             <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
             <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
             <script src="/Scripts/angular.min.js"></script>
@@ -90,45 +132,9 @@
                     </div>
                 </div>
             </footer>
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Nome">Nome <h11>*</h11></label>  
-                <div class="col-md-12 col-md-6">
-                <input id="nome" name="nome" class="form-control input-md" required="CPF Obrigatorio" type="text" maxlength="60">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Cpf">CPF <h11>*</h11></label>  
-                <div class="col-md-12 col-md-6">
-                <input id="cpf" name="cpf" placeholder="Apenas números" class="form-group  input-md" required="CPF Obrigatorio" type="text" maxlength="11" pattern="[0-9]+$">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                    <label class="col-md-12 col-md-6 control-label" for="Email">Email <h11>*</h11></label>  
-                    <div class="col-md-12 col-md-6">
-                    <input id="email" name="email" class="form-control input-md" type="text" required="Email Obrigatorio" maxlength="60">
-                    </div>
-                </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Endereco">Endereco</label>  
-                <div class="col-md-12 col-md-6">
-                <input id="endereco" name="endereco" class="form-control input-md" type="text" maxlength="60">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Cadastrar"></label>
-                <div class="col-md-12 col-md-6">
-                <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
-                <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
-                </div>
-            </div>
-
             <script src="app/bundle//site.min.js"></script>
             <script type="text/javascript" src="js/vegas.min.js"></script>
-            <script type="text/javascript" src="Scripts/acoes_cadastro.js"></script>
+            <script type="text/javascript" src="Scripts/acoes_distribuidas.js"></script>
             <script>
                 $(".banner").vegas({
                     slides: [{
