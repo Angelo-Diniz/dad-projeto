@@ -30,6 +30,9 @@ function buscarDoacoes(cpf) {
                 var retorno = JSON.parse(request.response);
 
                 retorno.doacoes.forEach(doacao => {
+
+                    /*TENTAR COLOCAR DE FORMA BUNITINHA*/
+
                     itemValor.innerHTML = "Data: " + " " + doacao.data;
                     itemData.innerHTML = "Valor: " + " " + doacao.valor;
 
