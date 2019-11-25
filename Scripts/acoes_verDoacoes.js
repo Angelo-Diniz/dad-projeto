@@ -31,7 +31,7 @@ function buscarDoacoes(cpf) {
 
                 retorno.doacoes.forEach(doacao => {
                     itemValor.innerHTML = "Data: " + " " + doacao.data;
-                    itemData.innerHTML = "Tipo: " + " " + doacao.valor;
+                    itemData.innerHTML = "Valor: " + " " + doacao.valor;
 
                     lista.appendChild(itemValor);
                     lista.appendChild(itemData);
