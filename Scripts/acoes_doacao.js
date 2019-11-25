@@ -21,6 +21,7 @@ $(document).ready(function () {
 });
 
 function cadastrarDoacao(valor, cpf) {
+    valor = parseFloat(valor);
     try {
         let webService = services.find(servico => servico.identificador === "cadastrarDoacao");
         let dados = {
