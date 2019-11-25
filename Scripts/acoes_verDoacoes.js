@@ -2,9 +2,9 @@ $(document).ready(function () {
     $("#verDoacoes").click(function () {
         try {
             if ($("#cpf").val() !== "") {
-                exibirLoader();
+
                 buscarDoacoes($("#cpf").val());
-                ocultarLoader();
+             
             } else {
                 alert("Nome, CPF e Email são obritatórios");
             }   
@@ -31,17 +31,14 @@ function buscarDoacoes(cpf) {
                 console.log(request.status);
                 ocultarItem();
                 var retorno = JSON.parse(request.response);
+                
+                itemValor.innerHTML = "Nome: " + " " + retorno.nome;
+                itemData.innerHTML = "Doações: " + " " + retorno.saldoDoacoes;
+                lista.appendChild(itemValor);
+                lista.appendChild(itemData);
 
                 retorno.doacoes.forEach(doacao => {
-
                     /*TENTAR COLOCAR DE FORMA BUNITINHA*/
-
-                    itemValor.innerHTML = "Data: " + " " + doacao.data;
-                    itemData.innerHTML = "Valor: " + " " + doacao.valor;
-
-                    lista.appendChild(itemValor);
-                    lista.appendChild(itemData);
-                
                 });
 
             } else {
@@ -53,15 +50,6 @@ function buscarDoacoes(cpf) {
     } catch (error) {
         console.log(JSON.stringify(error) + 'Response' + JSON.stringify(request))
     }
-}
-
-function exibirLoader() {
-    document.getElementById("loader").style.display = "none";
-
-}
-
-function ocultarLoader() {
-    document.getElementById("myDiv").style.display = "block";
 }
 
 
