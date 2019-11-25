@@ -26,7 +26,7 @@ function buscarDoacoes(cpf) {
         request.send();
 
         request.onload = (e) => {
-            if (request.response) {
+            if (request.status === 302) {
               
                 console.log(request.status);
                 ocultarItem();
