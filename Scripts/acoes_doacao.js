@@ -4,13 +4,13 @@ $(document).ready(function () {
             if ($("#nome").val() !== "" &&
                 $("#cpf").val() !== "") {
                 if (cadastrarDoacao($("#valor").val(), $("#cpf").val())) {
-                    alert("Cadastrado!");
+                    alert("Agradecemos sua doação! \nDoe mais!! :)");
                     document.location.reload(true);
                 } else {
                     alert("Desculpe! \nTivemos um problema. Tente mais tarde!");
                 }
             } else {
-                alert("Nome, CPF e Email são obritatórios");
+                alert("CPF e Valor são obrigatorios");
             }
         } catch (error) {
             console.log(error.message)
@@ -41,6 +41,7 @@ function cadastrarDoacao(valor, cpf) {
                 return false;
             }
         }
+        return true;
     } catch (error) {
         console.log(JSON.stringify(error) + 'Response' + JSON.stringify(request))
     }

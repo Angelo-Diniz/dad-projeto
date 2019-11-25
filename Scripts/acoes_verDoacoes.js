@@ -2,7 +2,9 @@ $(document).ready(function () {
     $("#verDoacoes").click(function () {
         try {
             if ($("#cpf").val() !== "") {
+                exibirLoader();
                 buscarDoacoes($("#cpf").val());
+                ocultarLoader();
             } else {
                 alert("Nome, CPF e Email são obritatórios");
             }   
@@ -25,6 +27,7 @@ function buscarDoacoes(cpf) {
 
         request.onload = (e) => {
             if (request.response) {
+              
                 console.log(request.status);
                 ocultarItem();
                 var retorno = JSON.parse(request.response);
@@ -52,6 +55,14 @@ function buscarDoacoes(cpf) {
     }
 }
 
+function exibirLoader() {
+    document.getElementById("loader").style.display = "none";
+
+}
+
+function ocultarLoader() {
+    document.getElementById("myDiv").style.display = "block";
+}
 
 
 const lista = document.getElementById('lista');

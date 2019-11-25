@@ -43,7 +43,7 @@ function cadastrarDoador(nome, email, cpf, endereco) {
                 return false;
             }
         }
-
+        return true;
     } catch (error) {
         console.log(JSON.stringify(error) + 'Response' + JSON.stringify(request))
     }
