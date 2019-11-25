@@ -156,7 +156,7 @@
 
                             <!--    INICIO MODAL    -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoacaoEmail">
-                                Envie-me um email
+                                Doar agora
                             </button>
 
                             <!-- Modal -->
@@ -164,29 +164,24 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header modal_Dialog">
-                                            <h5 class="modal-title" id="exampleModalLabel">Doação por e-mail</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Fazer doação</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <select class="mdb-select md-form" id="valorSelecionado" required="">
-                                                <option value="" selected>Selecione um valor</option>
-                                                <option value="50">R$5,00</option>
-                                                <option value="10">R$10,00</option>
-                                                <option value=15>R$15,00</option>
-                                                <option value="20">R$20,00</option>
-                                                <option value="30">R$30,00</option>
-                                                <option value="50">R$50,00</option>
-                                            </select>
-                                          
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">E-mail</label>
-                                                <input type="text" id="emailDoador" class="form-group" required="">
+                                            <label class="col-md-12 col-md-6 control-label" for="Valor">Valor <h11>*</h11></label>  
+                                            <div class="col-md-12 col-md-6">
+                                            <input id="valor" name="valor" class="form-control input-md" type="text" required="Valor" maxlength="60">
                                             </div>
+                                            <label class="col-md-12 col-md-6 control-label" for="cpf">CPF <h11>*</h11></label>  
+                                            <div class="col-md-12 col-md-6">
+                                            <input id="cpf" name="cpf" class="form-control input-md" type="text" required="CPf" maxlength="11">
+                                            </div>
+
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                                <button type="button" class="btn btn-primary" id="enviarEmail" >enviar</button>
+                                                <button type="button" class="btn btn-primary" id="enviarDoacao" >enviar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +245,7 @@
             </footer>
             <script src="app/bundle//site.min.js"></script>
             <script type="text/javascript" src="js/vegas.min.js"></script>
-            <script type="text/javascript" src="Scripts/acoes_distribuidas.js"></script>
+            <script type="text/javascript" src="Scripts/acoes_doacao.js"></script>
             <script>
                 $(".banner").vegas({
                     slides: [{

@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    $("#Cadastrar").click(function () {
+    $("#enviarDoacao").click(function () {
         try {
             if ($("#nome").val() !== "" &&
                 $("#cpf").val() !== "") {
-                if (cadastrarDoador($("#nome").val(), $("#email").val(), $("#cpf").val(), $("#endereco").val())) {
+                if (cadastrarDoacao($("#valor").val(), $("#cpf").val())) {
                     alert("Cadastrado!");
                     document.location.reload(true);
                 } else {
@@ -20,14 +20,12 @@ $(document).ready(function () {
     });
 });
 
-function cadastrarDoador(nome, email, cpf, endereco) {
+function cadastrarDoacao(valor, cpf) {
     try {
-        let webService = services.find(servico => servico.identificador === "cadastrarDoador");
+        let webService = services.find(servico => servico.identificador === "cadastrarDoacao");
         let dados = {
-            "nome": nome,
             "cpf": cpf,
-            "endereco": endereco || "Nao disponivel",
-            "email": email
+            "valor": valor
         }
         const request = new XMLHttpRequest();
         const url = webService.url;
@@ -43,15 +41,14 @@ function cadastrarDoador(nome, email, cpf, endereco) {
                 return false;
             }
         }
-
     } catch (error) {
         console.log(JSON.stringify(error) + 'Response' + JSON.stringify(request))
     }
 }
 
 const services = [{
-    identificador: "cadastrarDoador",
-    url: "https://api-dad.herokuapp.com/pessoa",
+    identificador: "cadastrarDoacao",
+    url: "https://api-dad.herokuapp.com/doacao",
     token: "",
     usuario: "",
     senha: "",

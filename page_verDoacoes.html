@@ -66,7 +66,7 @@
         </div>
         <div id="container">
 
-                <div class="d-flex justify-content-center containter_login">
+                <div id="containter_login" class="d-flex justify-content-center containter_login">
                         <div class="user_card">
                             <div class="d-flex justify-content-center">
                                 <div class="brand_logo_container">
@@ -77,15 +77,9 @@
                                 <form>
                                     <div class="input-group mb-3">
                                         <div class="input-group-append">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <span class="input-group-text">CPF<i class="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" name="" class="form-control input_user" value="" placeholder="e-mail">
-                                    </div>
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                        </div>
-                                        <input type="password" name="" class="form-control input_pass" value="" placeholder="senha">
+                                        <input type="password" name="cpf" id="cpf" class="form-control input_user" value="" placeholder="   somente numeros" maxlength="11">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox">
@@ -94,11 +88,10 @@
                                         </div>
                                     </div>
                                         <div class="d-flex justify-content-center mt-3 login_container">
-                                 <button type="button" name="button" class="btn login_btn">Entrar</button>
+                                 <button type="button" id="verDoacoes" name="button" class="btn login_btn">Ver minhas doações</button>
                                </div>
                                 </form>
                             </div>
-                    
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links">
                                     Não possui uma conta ? <a href="page_cadastro.html" class="ml-2">Cadastre-se</a>
@@ -106,7 +99,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
 
+                        <div class="form-group col-md-12">
+                            <p id="demo"></p>
+                            <div class="produtos form-group">
+                               <ul id="lista" class="form-group">
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+                  
             <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
             <script type="text/javascript" src="Scripts/materialize/materialize.min.js"></script>
             <script src="/Scripts/angular.min.js"></script>
@@ -149,7 +152,7 @@
             </footer>
             <script src="app/bundle//site.min.js"></script>
             <script type="text/javascript" src="js/vegas.min.js"></script>
-            <script type="text/javascript" src="Scripts/acoes_distribuidas.js"></script>
+            <script type="text/javascript" src="Scripts/acoes_verDoacoes.js"></script>
             <script>
                 $(".banner").vegas({
                     slides: [{
