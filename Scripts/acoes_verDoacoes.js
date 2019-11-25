@@ -6,7 +6,7 @@ $(document).ready(function () {
                 buscarDoacoes($("#cpf").val());
              
             } else {
-                alert("Nome, CPF e Email são obritatórios");
+                alert("Caro doador, favor informar CPF!");
             }   
         } catch (error) {
             console.log(error.message)
@@ -31,15 +31,11 @@ function buscarDoacoes(cpf) {
                 console.log(request.status);
                 ocultarItem();
                 var retorno = JSON.parse(request.response);
-                
-                itemValor.innerHTML = "Nome: " + " " + retorno.nome;
-                itemData.innerHTML = "Doações: " + " " + retorno.saldoDoacoes;
-                lista.appendChild(itemValor);
-                lista.appendChild(itemData);
-
+                preencheDadosDoador(retorno.nome, retorno.saldoDoacoes)
                 retorno.doacoes.forEach(doacao => {
-                    /*TENTAR COLOCAR DE FORMA BUNITINHA*/
+                    preencheLista(doacao.valor, doacao.data.substring(0,10));
                 });
+                document.getElementById("exibicaoDoacoes").style.display = "block";
 
             } else {
                 alert("CPF NÃO LOCALIZADO")
@@ -51,11 +47,9 @@ function buscarDoacoes(cpf) {
         console.log(JSON.stringify(error) + 'Response' + JSON.stringify(request))
     }
 }
-
-
-const lista = document.getElementById('lista');
-const itemValor = document.createElement('li');
-const itemData = document.createElement('li');
+const container = document.getElementById('accordion');
+const containerDoador = document.getElementById('dadosDoador');
+const doadorDados = document.getElementById('nome');
 
 const services = [{
     identificador: "buscarDoacoes",
@@ -64,6 +58,39 @@ const services = [{
     usuario: "",
     senha: "",
 }];
+
+function preencheLista(valor, data) {
+    const card = document.createElement('div');
+    card.classList = 'card-body';
+  // Construct card content
+  const content = `
+ 
+    <div class="card-body">
+        <h5 class="card-title">Data: ${data}</h5>
+        <p class="card-text">Valor: R$${valor}</p>
+    </div>
+  `;
+
+  // Append newyly created card element to the container
+  container.innerHTML += content;
+}
+
+function preencheDadosDoador(nome, totalDoacoes) {
+    const cardDoador = document.createElement('div');
+    cardDoador.classList = 'card-body';
+  // Construct card content
+  const content = `
+            <div class="card-header">
+            Doador: ${nome}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Total de doações: R$${totalDoacoes}</h5>
+            </div>
+  `;
+
+  // Append newyly created card element to the container
+  containerDoador.innerHTML += content;
+}
 
 function doacao(data, valor){
     this.data = data;
@@ -76,7 +103,3 @@ function ocultarItem() {
     divBusca.parentdivBusca.removeChild(divBusca);
     }
 }
-
- //Chamar a função
-
- 
