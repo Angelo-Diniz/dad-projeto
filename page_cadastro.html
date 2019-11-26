@@ -14,18 +14,23 @@
     <!--bibliotecas bootstrap-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <meta name="author" content="www.clicksolucoesweb.com.br" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="content/font-awesome.min.css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="css/vegas.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="content/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="content/materialize/css/materialize.min.css"
+        media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="app/bundle/site.min.css" />
     <title>ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG</title>
-    <meta name="description" content="ONG de apoio ao tratamento de c&#226;ncer - Fa&#231;a sua doa&#231;&#227;o para institui&#231;&#227;o de tratamento de c&#226;ncer - Ajude os portadores de c&#226;ncer a melhorar a sua qualidade de vi" />
-    <meta name="keywords" content="aspec, ong, tratamento de c&#226;ncer, doa&#231;&#227;o para tratamento de c&#226;ncer, ajuda ao portador de c&#226;ncer, bh, mg" />
+    <meta name="description"
+        content="ONG de apoio ao tratamento de c&#226;ncer - Fa&#231;a sua doa&#231;&#227;o para institui&#231;&#227;o de tratamento de c&#226;ncer - Ajude os portadores de c&#226;ncer a melhorar a sua qualidade de vi" />
+    <meta name="keywords"
+        content="aspec, ong, tratamento de c&#226;ncer, doa&#231;&#227;o para tratamento de c&#226;ncer, ajuda ao portador de c&#226;ncer, bh, mg" />
     <meta name="robots" content="index, follow" />
 </head>
 
@@ -34,12 +39,13 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="index.html" class="brand-logo">
-                    <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
+                    <img src="imagens/aspec.png" alt="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG"
+                        title="ASPEC - ONG de apoio ao tratamento de c&#226;ncer - BH/MG" />
                 </a>
                 <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down table-of-contents">
                     <li><a href="index.html">Home</a></li>
-                   
+
                 </ul>
                 <ul class="side-nav table-of-contents" id="mobile">
                     <li><a href="index.html">Home</a></li>
@@ -62,17 +68,57 @@
             <script src="Scripts/dirPagination.js"></script>
 
             <script type="text/javascript" src="app/site/bundle/app.min.js"></script>
+            <div class="form-group">
+                <label class="col-md-12 col-md-6 control-label" for="Nome">Nome <h11>*</h11></label>
+                <div class="col-md-12 col-md-6">
+                    <input id="nome" name="nome" class="form-control input-md" required="CPF Obrigatorio" type="text"
+                        maxlength="60">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-12 col-md-6 control-label" for="Cpf">CPF <h11>*</h11></label>
+                <div class="col-md-12 col-md-6">
+                    <input id="cpf" name="cpf" placeholder="Apenas números" class="form-group  input-md"
+                        required="CPF Obrigatorio" type="text" maxlength="11" pattern="[0-9]+$">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-12 col-md-6 control-label" for="Email">Email <h11>*</h11></label>
+                <div class="col-md-12 col-md-6">
+                    <input id="email" name="email" class="form-control input-md" type="text"
+                        required="Email Obrigatorio" maxlength="60">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-12 col-md-6 control-label" for="Endereco">Endereco</label>
+                <div class="col-md-12 col-md-6">
+                    <input id="endereco" name="endereco" class="form-control input-md" type="text" maxlength="60">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-12 col-md-6 control-label" for="Cadastrar"></label>
+                <div class="col-md-12 col-md-6">
+                    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+                    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+                </div>
+            </div>
+
             <footer class="page-footer">
                 <div class="container">
                     <div class="row" style="margin-top:30px; margin-bottom:30px">
                         <div class="col l6 s12">
                             <p class="text-lighten-4">
-                                <i class="tiny material-icons">mail</i>&nbsp;<a href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
+                                <i class="tiny material-icons">mail</i>&nbsp;<a
+                                    href="mailto:contato@aspecsolidaria.org.br">contato@aspecsolidaria.org.br</a>
                                 <br />
                                 <i class="tiny material-icons">phone</i>&nbsp;(31) 3567-0229 / 3582-7145
                             </p>
                             <p class="text-lighten-4">
-                                <a href="http://www.facebook.com/ong.aspec" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                                <a href="http://www.facebook.com/ong.aspec" target="_blank"><i
+                                        class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                             </p>
                         </div>
                         <div class="col l4 offset-l2 s12">
@@ -86,46 +132,11 @@
                 <div class="footer-copyright">
                     <div class="container">
                         2019 - ASPEC - Ação Solidária às Pessoas com Câncer - Todos os Direitos Reservados
-                        <span class="text-lighten-4 right">Desenvolvido por: <a href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
+                        <span class="text-lighten-4 right">Desenvolvido por: <a
+                                href="http://www.clicksolucoesweb.com.br" target="_blank">Click Soluções WEB</a></span>
                     </div>
                 </div>
             </footer>
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Nome">Nome <h11>*</h11></label>  
-                <div class="col-md-12 col-md-6">
-                <input id="nome" name="nome" class="form-control input-md" required="CPF Obrigatorio" type="text" maxlength="60">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Cpf">CPF <h11>*</h11></label>  
-                <div class="col-md-12 col-md-6">
-                <input id="cpf" name="cpf" placeholder="Apenas números" class="form-group  input-md" required="CPF Obrigatorio" type="text" maxlength="11" pattern="[0-9]+$">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                    <label class="col-md-12 col-md-6 control-label" for="Email">Email <h11>*</h11></label>  
-                    <div class="col-md-12 col-md-6">
-                    <input id="email" name="email" class="form-control input-md" type="text" required="Email Obrigatorio" maxlength="60">
-                    </div>
-                </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Endereco">Endereco</label>  
-                <div class="col-md-12 col-md-6">
-                <input id="endereco" name="endereco" class="form-control input-md" type="text" maxlength="60">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-12 col-md-6 control-label" for="Cadastrar"></label>
-                <div class="col-md-12 col-md-6">
-                <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
-                <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
-                </div>
-            </div>
-
             <script src="app/bundle//site.min.js"></script>
             <script type="text/javascript" src="js/vegas.min.js"></script>
             <script type="text/javascript" src="Scripts/acoes_cadastro.js"></script>
@@ -149,7 +160,7 @@
                 };
             </script>
             <script>
-                $(document).ready(function() {
+                $(document).ready(function () {
                     $('.button-collapse').sideNav();
                     $('.slider').slider({
                         full_width: true
@@ -163,7 +174,7 @@
                 });
             </script>
         </div>
-            
+
 </body>
 
 </html>
